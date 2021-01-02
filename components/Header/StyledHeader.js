@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
-  padding: 0;
+  padding: 10px;
   margin: 0;
-  ${(props) => props.height && `height: ${props.height}px;`};
+  display: flex;
+  align-items: center;
+  ${(props) => props.customHeight && `height: ${props.customHeight}px;`};
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 

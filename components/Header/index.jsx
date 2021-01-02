@@ -1,8 +1,8 @@
 import StyledHeader from "./StyledHeader";
 
-export default function Header({ height }) {
+export default function Header({ customHeight }) {
   return (
-    <StyledHeader height={height}>
+    <StyledHeader customHeight={customHeight}>
       <h1>Pokemon</h1>
     </StyledHeader>
   );

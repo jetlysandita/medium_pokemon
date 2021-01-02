@@ -8,7 +8,7 @@ export default function MainLayout(props) {
       <Head>
         <title>Pokemon</title>
       </Head>
-      <Header height={80} />
+      <Header customHeight={80} />
       <div>{children}</div>
     </>
   );

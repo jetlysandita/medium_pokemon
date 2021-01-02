@@ -1,18 +1,23 @@
+import PokemonCard from "../components/PokemonCard";
 import MainLayout from "../layouts/MainLayout";
+
+export const config = { amp: true };
+
 export default function Home(props) {
   const { data } = props;
   return (
     <MainLayout>
-      {data.results.map((pokemon, i) => {
-        return <div key={i}>{pokemon.name}</div>;
-      })}
+      <amp-list
+        load-more="manual"
+        width="auto"
+        height="80"
+        src="/api/pokemon"
+        load-more-bookmark="next"
+      >
+        <template type="amp-mustache">
+          <PokemonCard url="{{url}}" name="{{name}}" />
+        </template>
+      </amp-list>
     </MainLayout>
   );
-}
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`${process.env.baseUrlApi}pokemon?limit=10`);
-  const data = await res.json();
-  // Pass data to the page via props
-  return { props: { data } };
 }
