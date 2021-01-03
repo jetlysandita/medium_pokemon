@@ -18,6 +18,7 @@ export default function Home(props) {
           <PokemonCard url="{{url}}" name="{{name}}" />
         </template>
       </amp-list>
+      <amp-layout layout="responsive" width="0" height="0"></amp-layout>
     </MainLayout>
   );
 }
