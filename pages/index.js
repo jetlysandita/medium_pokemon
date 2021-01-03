@@ -3,8 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 
 export const config = { amp: true };
 
-export default function Home(props) {
-  const { data } = props;
+export default function Home() {
   return (
     <MainLayout>
       <amp-list
@@ -18,6 +17,7 @@ export default function Home(props) {
           <PokemonCard url="{{url}}" name="{{name}}" />
         </template>
       </amp-list>
+      <amp-layout layout="responsive" width="0" height="0"></amp-layout>
     </MainLayout>
   );
 }
