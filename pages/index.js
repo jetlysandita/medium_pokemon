@@ -3,8 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 
 export const config = { amp: true };
 
-export default function Home(props) {
-  const { data } = props;
+export default function Home() {
   return (
     <MainLayout>
       <amp-list
